@@ -1,5 +1,5 @@
 # DiskLib
-DiskLib is an easy to use zero dependency Disk Writer &amp; Disk Reader with built in GZIP support.
+DiskLib is an easy to use zero dependency Disk Writer &amp; Disk Reader with built in GZIP support for Java..
 
 ## Links
 * [Website](https://konloch.com/DiskLib)
