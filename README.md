@@ -34,6 +34,6 @@ byte[] bytes = DiskReader.readBytes("hello.txt");
 
 
 ## Links
-* [Website](https://konloch.com/DiskLib)
+* [Website](https://konloch.com/DiskLib/)
 * [Discord Server](https://discord.gg/aexsYpfMEf)
 * [Download Releases](https://github.com/Konloch/DiskLib/releases)
