@@ -5,7 +5,7 @@ DiskLib is an easy-to-use zero dependency Disk Writer &amp; Disk Reader with bui
 DynVarMap is zero dependency easy and straight forward way to manage attribute-like runtime variables for Java.
 
 # How To
-**You can pass *either* a String path or a File object for the first parameter.**
+**You can pass *either* a String path or a File object for the first parameter. To use the GZIP functionality, use GZIPDiskReader or GZIPDiskWriter**
 
 ### Write new file to disk / overwrite existing file
 ```java
