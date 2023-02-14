@@ -33,5 +33,5 @@ jobs:
       if: ${{ matrix.java == '8' }}
       with:
         name: DiskLib-${{ env.lib_version }}-SNAPSHOT
-        path: /home/runner/work/DiskLib/DiskLib/target/disklib-${{ env.lib_version }}-shaded.jar
+        path: /target/disklib-${{ env.lib_version }}.jar
         retention-days: 90
