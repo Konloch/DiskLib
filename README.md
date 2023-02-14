@@ -7,27 +7,27 @@ DynVarMap is zero dependency easy and straight forward way to manage attribute-l
 # How To
 **You can pass *either* a String path or a File object for the first parameter.**
 
-#### Write new file to disk / overwrite existing file
+### Write new file to disk / overwrite existing file
 ```java
 DiskReader.write("hello.txt", "Hello ");
 ```
 
-#### Append to existing file
+### Append to existing file
 ```java
 DiskReader.append("hello.txt", "World");
 ```
 
-#### Reading Strings from disk
+### Reading Strings from disk
 ```java
 ArrayList<String> lines = DiskReader.read("hello.txt");
 ```
 
-#### Reading String Arrays from disk
+### Reading String Arrays from disk
 ```java
 String[] lines = DiskReader.readLines("hello.txt");
 ```
 
-#### Reading Bytes from disk
+### Reading Bytes from disk
 ```java
 byte[] bytes = DiskReader.readBytes("hello.txt");
 ```
