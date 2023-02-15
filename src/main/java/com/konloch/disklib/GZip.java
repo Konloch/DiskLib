@@ -18,6 +18,9 @@ public class GZip
 	
 	/**
 	 * Compress a byte[] using GZip Compression (ZLib)
+	 *
+	 * @param data byte Array of any size
+	 * @return compressed byte Array with GZip Compression (ZLib)
 	 */
 	public static byte[] compress(byte[] data)
 	{
@@ -58,6 +61,10 @@ public class GZip
 	
 	/**
 	 * Decompress a byte[] using GZip Compression (ZLib)
+	 *
+	 * @param data compressed GZIP (ZLib) byte Array of any size
+	 * @return decompressed byte Array with GZip Compression (ZLib)
+	 * @throws DataFormatException if the compressed data format is invalid
 	 */
 	public static byte[] decompress(byte[] data) throws DataFormatException
 	{

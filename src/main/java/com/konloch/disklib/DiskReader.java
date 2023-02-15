@@ -17,28 +17,84 @@ import java.util.ArrayList;
 public class DiskReader
 {
 	/**
-	 * Used to load from file
+	 * Load a file into a String Array from a valid String path
+	 *
+	 * @param file any valid file path to open
+	 * @return String Array with the file content lines
+	 * @throws IOException if an I/O error occurs reading from the stream
+	 */
+	public static String[] readLines(String file) throws IOException
+	{
+		return read(file).toArray(new String[0]);
+	}
+	
+	/**
+	 * Load a file into a String Array from a File object
+	 *
+	 * @param file the file object to open
+	 * @return String Array with the file content lines
+	 * @throws IOException if an I/O error occurs reading from the stream
+	 */
+	public static String[] readLines(File file) throws IOException
+	{
+		return read(file).toArray(new String[0]);
+	}
+	
+	/**
+	 * Loads a file into a byte Array from a valid String path
+	 *
+	 * @param file any valid file path to open
+	 * @return byte Array with the file content lines
+	 * @throws IOException if an I/O error occurs reading from the stream
+	 */
+	public static byte[] readBytes(String file) throws IOException
+	{
+		return readBytes(new File(file));
+	}
+	
+	/**
+	 * Loads a file into a byte Array from a File object
+	 *
+	 * @param file the file object to open
+	 * @return byte Array with the file content lines
+	 * @throws IOException if an I/O error occurs reading from the stream
+	 */
+	public static byte[] readBytes(File file) throws IOException
+	{
+		return Files.readAllBytes(file.toPath());
+	}
+	
+	/**
+	 * Loads a file into a String ArrayList from a valid String path
+	 *
+	 * @param file any valid file path to open
+	 * @return String ArrayList with the file content lines
+	 * @throws IOException if an I/O error occurs reading from the stream
 	 */
 	public static ArrayList<String> read(String file) throws IOException
 	{
 		return read(new File(file));
 	}
-
+	
 	/**
-	 * Used to load from file
+	 * Loads a file into a String ArrayList from a File object
+	 *
+	 * @param file the file object to open
+	 * @return String ArrayList with the file content lines
+	 * @throws IOException if an I/O error occurs reading from the stream
 	 */
 	public static ArrayList<String> read(File file) throws IOException
 	{
 		ArrayList<String> array = new ArrayList<>();
-
+		
 		String fullString = new String(readBytes(file), StandardCharsets.UTF_8);
-
+		
 		BufferedReader reader = null;
 		try
 		{
 			reader = new BufferedReader(new StringReader(fullString));
 			String add;
-
+			
 			while ((add = reader.readLine()) != null)
 			{
 				array.add(add);
@@ -56,37 +112,14 @@ public class DiskReader
 					reader.close();
 				} catch (Exception ex) {}
 		}
-
+		
 		return array;
 	}
 	
 	/**
-	 * Used to load from file
-	 */
-	public static String[] readLines(String file) throws IOException
-	{
-		return read(file).toArray(new String[0]);
-	}
-	
-	
-	/**
-	 * Returns a byte[] from the file
-	 */
-	public static byte[] readBytes(String file) throws IOException
-	{
-		return readBytes(new File(file));
-	}
-
-	/**
-	 * Returns a byte[] from the file
-	 */
-	public static byte[] readBytes(File file) throws IOException
-	{
-		return Files.readAllBytes(file.toPath());
-	}
-	
-	/**
-	 * Used to alert the user this is a library
+	 * Alert that this is a library
+	 *
+	 * @param args program launch arguments
 	 */
 	public static void main(String[] args)
 	{
