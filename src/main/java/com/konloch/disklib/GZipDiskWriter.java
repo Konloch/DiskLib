@@ -73,6 +73,7 @@ public class GZipDiskWriter
      * If the file doesn't exist it will automatically create it.
      *
      * @param file any valid file path to open
+     * @param line String to write
      * @throws IOException if an I/O error occurs
      */
     public static void append(String file, String line) throws IOException
@@ -85,6 +86,7 @@ public class GZipDiskWriter
      * If the file doesn't exist it will automatically create it.
      *
      * @param file any valid file path to open
+     * @param line String to write
      * @throws IOException if an I/O error occurs
      */
     public static void append(File file, String line) throws IOException
@@ -97,6 +99,7 @@ public class GZipDiskWriter
      * If the file doesn't exist it will automatically create it.
      *
      * @param file any valid file path to open
+     * @param line String to write
      * @param appendNewLine true to append a new line
      * @throws IOException if an I/O error occurs
      */
@@ -110,6 +113,7 @@ public class GZipDiskWriter
      * If the file doesn't exist it will automatically create it.
      *
      * @param file any valid file path to open
+     * @param line String to write
      * @param appendNewLine true to append a new line
      * @throws IOException if an I/O error occurs
      */
@@ -232,6 +236,7 @@ public class GZipDiskWriter
      * If the file doesn't exist it will automatically create it.
      *
      * @param file any valid file path to open
+     * @param line String to write
      * @throws IOException if an I/O error occurs
      */
     public static void write(String file, String line) throws IOException
@@ -244,6 +249,7 @@ public class GZipDiskWriter
      * If the file doesn't exist it will automatically create it.
      *
      * @param file any valid file path to open
+     * @param line String to write
      * @throws IOException if an I/O error occurs
      */
     public static void write(File file, String line) throws IOException
@@ -256,6 +262,7 @@ public class GZipDiskWriter
      * If the file doesn't exist it will automatically create it.
      *
      * @param file any valid file path to open
+     * @param line String to write
      * @param appendNewLine true to append a new line
      * @throws IOException if an I/O error occurs
      */
@@ -269,6 +276,7 @@ public class GZipDiskWriter
      * If the file doesn't exist it will automatically create it.
      *
      * @param file any valid file path to open
+     * @param line String to write
      * @param appendNewLine true to append a new line
      * @throws IOException if an I/O error occurs
      */

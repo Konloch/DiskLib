@@ -23,7 +23,7 @@ public class GZipDiskReader
 	 * @param file any valid file path to open
 	 * @return String Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
-	 * @throws DataFormatException
+	 * @throws DataFormatException if the compressed data format is invalid
 	 */
 	public static String[] readLines(String file) throws IOException, DataFormatException
 	{
@@ -36,7 +36,7 @@ public class GZipDiskReader
 	 * @param file the file object to open
 	 * @return String Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
-	 * @throws DataFormatException
+	 * @throws DataFormatException if the compressed data format is invalid
 	 */
 	public static String[] readLines(File file) throws IOException, DataFormatException
 	{
@@ -49,7 +49,7 @@ public class GZipDiskReader
 	 * @param file any valid file path to open
 	 * @return byte Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
-	 * @throws DataFormatException
+	 * @throws DataFormatException if the compressed data format is invalid
 	 */
 	public static byte[] readBytes(String file) throws IOException, DataFormatException
 	{
@@ -62,7 +62,7 @@ public class GZipDiskReader
 	 * @param file the file object to open
 	 * @return byte Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
-	 * @throws DataFormatException
+	 * @throws DataFormatException if the compressed data format is invalid
 	 */
 	public static byte[] readBytes(File file) throws IOException, DataFormatException
 	{
@@ -75,7 +75,7 @@ public class GZipDiskReader
 	 * @param file any valid file path to open
 	 * @return String ArrayList with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
-	 * @throws DataFormatException
+	 * @throws DataFormatException if the compressed data format is invalid
 	 */
 	public static ArrayList<String> read(String file) throws IOException, DataFormatException
 	{
@@ -88,7 +88,7 @@ public class GZipDiskReader
 	 * @param file the file object to open
 	 * @return String ArrayList with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
-	 * @throws DataFormatException
+	 * @throws DataFormatException if the compressed data format is invalid
 	 */
 	public static ArrayList<String> read(File file) throws IOException, DataFormatException
 	{
