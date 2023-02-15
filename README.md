@@ -1,7 +1,7 @@
 # DiskLib
 DiskLib is an easy-to-use zero dependency Disk Writer &amp; Disk Reader with built-in GZIP support for Java.
 
-# How To Add
+## How To Add As Library
 Add it as a maven dependecy or just [download the latest release](https://github.com/Konloch/DiskLib/releases).
 ```xml
 <dependency>
@@ -11,7 +11,7 @@ Add it as a maven dependecy or just [download the latest release](https://github
 </dependency>
 ```
 
-# How To Use
+## How To Use
 **You can pass *either* a String path or a File object for the first parameter. To use the GZIP functionality, use GZIPDiskReader or GZIPDiskWriter**
 
 ### Write new file to disk / overwrite existing file
@@ -38,7 +38,6 @@ String[] lines = DiskReader.readLines("hello.txt");
 ```java
 byte[] bytes = DiskReader.readBytes("hello.txt");
 ```
-
 
 ## Links
 * [Website](https://konloch.com/DiskLib/)
