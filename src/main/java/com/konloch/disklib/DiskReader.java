@@ -84,4 +84,12 @@ public class DiskReader
 	{
 		return Files.readAllBytes(file.toPath());
 	}
+	
+	/**
+	 * Used to alert the user this is a library
+	 */
+	public static void main(String[] args)
+	{
+		throw new RuntimeException("Incorrect usage");
+	}
 }
