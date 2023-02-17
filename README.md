@@ -11,6 +11,11 @@ Add it as a maven dependency or just [download the latest release](https://githu
 </dependency>
 ```
 
+## Links
+* [Website](https://konloch.com/DiskLib/)
+* [Discord Server](https://discord.gg/aexsYpfMEf)
+* [Download Releases](https://github.com/Konloch/DiskLib/releases)
+
 ## How To Use
 **You can pass *either* a String path or a File object for the first parameter. To use the GZIP functionality, use GZIPDiskReader or GZIPDiskWriter**
 
@@ -38,8 +43,3 @@ String[] lines = DiskReader.readLines("hello.txt");
 ```java
 byte[] bytes = DiskReader.readBytes("hello.txt");
 ```
-
-## Links
-* [Website](https://konloch.com/DiskLib/)
-* [Discord Server](https://discord.gg/aexsYpfMEf)
-* [Download Releases](https://github.com/Konloch/DiskLib/releases)
