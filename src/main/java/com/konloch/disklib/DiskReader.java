@@ -19,19 +19,19 @@ public class DiskReader
 	/**
 	 * Load a file into a String Array from a valid String path
 	 *
-	 * @param file any valid file path to open
+	 * @param filePath any valid file path to read from
 	 * @return String Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 */
-	public static String[] readLines(String file) throws IOException
+	public static String[] readLines(String filePath) throws IOException
 	{
-		return read(file).toArray(new String[0]);
+		return read(filePath).toArray(new String[0]);
 	}
 	
 	/**
 	 * Load a file into a String Array from a File object
 	 *
-	 * @param file the file object to open
+	 * @param file the file object to read from
 	 * @return String Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 */
@@ -43,19 +43,19 @@ public class DiskReader
 	/**
 	 * Loads a file into a byte Array from a valid String path
 	 *
-	 * @param file any valid file path to open
+	 * @param filePath any valid file path to read from
 	 * @return byte Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 */
-	public static byte[] readBytes(String file) throws IOException
+	public static byte[] readBytes(String filePath) throws IOException
 	{
-		return readBytes(new File(file));
+		return readBytes(new File(filePath));
 	}
 	
 	/**
 	 * Loads a file into a byte Array from a File object
 	 *
-	 * @param file the file object to open
+	 * @param file the file object to read from
 	 * @return byte Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 */
@@ -65,21 +65,45 @@ public class DiskReader
 	}
 	
 	/**
+	 * Loads a file into a byte Array from a valid String path
+	 *
+	 * @param filePath any valid file path to read from
+	 * @return String with the file content lines
+	 * @throws IOException if an I/O error occurs reading from the stream
+	 */
+	public static String readString(String filePath) throws IOException
+	{
+		return new String(readBytes(filePath));
+	}
+	
+	/**
+	 * Loads a file into a String from a File object
+	 *
+	 * @param file the file object to read from
+	 * @return String with the file content lines
+	 * @throws IOException if an I/O error occurs reading from the stream
+	 */
+	public static String readString(File file) throws IOException
+	{
+		return new String(readBytes(file));
+	}
+	
+	/**
 	 * Loads a file into a String ArrayList from a valid String path
 	 *
-	 * @param file any valid file path to open
+	 * @param filePath any valid file path to read from
 	 * @return String ArrayList with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 */
-	public static ArrayList<String> read(String file) throws IOException
+	public static ArrayList<String> read(String filePath) throws IOException
 	{
-		return read(new File(file));
+		return read(new File(filePath));
 	}
 	
 	/**
 	 * Loads a file into a String ArrayList from a File object
 	 *
-	 * @param file the file object to open
+	 * @param file the file object to read from
 	 * @return String ArrayList with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 */

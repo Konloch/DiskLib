@@ -20,14 +20,14 @@ public class GZipDiskReader
 	/**
 	 * Decompresses and loads a gzip file into a String Array from a valid String path
 	 *
-	 * @param file any valid file path to open
+	 * @param filePath any valid file path to open
 	 * @return String Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 * @throws DataFormatException if the compressed data format is invalid
 	 */
-	public static String[] readLines(String file) throws IOException, DataFormatException
+	public static String[] readLines(String filePath) throws IOException, DataFormatException
 	{
-		return read(file).toArray(new String[0]);
+		return read(filePath).toArray(new String[0]);
 	}
 	
 	/**
@@ -46,14 +46,14 @@ public class GZipDiskReader
 	/**
 	 * Loads a file into a byte Array from a valid String path
 	 *
-	 * @param file any valid file path to open
+	 * @param filePath any valid file path to open
 	 * @return byte Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 * @throws DataFormatException if the compressed data format is invalid
 	 */
-	public static byte[] readBytes(String file) throws IOException, DataFormatException
+	public static byte[] readBytes(String filePath) throws IOException, DataFormatException
 	{
-		return readBytes(new File(file));
+		return readBytes(new File(filePath));
 	}
 	
 	/**
@@ -70,16 +70,42 @@ public class GZipDiskReader
 	}
 	
 	/**
+	 * Decompresses and loads a file into a String from a valid String path
+	 *
+	 * @param filePath any valid file path to read from
+	 * @return String with the file content lines
+	 * @throws IOException if an I/O error occurs reading from the stream
+	 * @throws DataFormatException if the compressed data format is invalid
+	 */
+	public static String readString(String filePath) throws IOException, DataFormatException
+	{
+		return new String(readBytes(filePath));
+	}
+	
+	/**
+	 * Decompresses and loads a file into a String from a File object
+	 *
+	 * @param file the file object to read from
+	 * @return String with the file content lines
+	 * @throws IOException if an I/O error occurs reading from the stream
+	 * @throws DataFormatException if the compressed data format is invalid
+	 */
+	public static String readString(File file) throws IOException, DataFormatException
+	{
+		return new String(readBytes(file));
+	}
+	
+	/**
 	 * Used to decompress and load a gzip file into a String ArrayList from a valid String path
 	 *
-	 * @param file any valid file path to open
+	 * @param filePath any valid file path to open
 	 * @return String ArrayList with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 * @throws DataFormatException if the compressed data format is invalid
 	 */
-	public static ArrayList<String> read(String file) throws IOException, DataFormatException
+	public static ArrayList<String> read(String filePath) throws IOException, DataFormatException
 	{
-		return read(new File(file));
+		return read(new File(filePath));
 	}
 	
 	/**
