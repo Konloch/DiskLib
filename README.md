@@ -7,7 +7,7 @@ Add it as a maven dependency or just [download the latest release](https://githu
 <dependency>
   <groupId>com.konloch</groupId>
   <artifactId>DiskLib</artifactId>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
 </dependency>
 ```
 
