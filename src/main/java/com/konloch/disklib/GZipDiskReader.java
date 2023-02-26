@@ -25,7 +25,7 @@ public class GZipDiskReader
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 * @throws DataFormatException if the compressed data format is invalid
 	 */
-	public static String[] readLines(String filePath) throws IOException, DataFormatException
+	public static String[] readArray(String filePath) throws IOException, DataFormatException
 	{
 		return read(filePath).toArray(new String[0]);
 	}
@@ -38,7 +38,7 @@ public class GZipDiskReader
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 * @throws DataFormatException if the compressed data format is invalid
 	 */
-	public static String[] readLines(File file) throws IOException, DataFormatException
+	public static String[] readArray(File file) throws IOException, DataFormatException
 	{
 		return read(file).toArray(new String[0]);
 	}

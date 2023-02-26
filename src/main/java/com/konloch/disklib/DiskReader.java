@@ -23,7 +23,7 @@ public class DiskReader
 	 * @return String Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 */
-	public static String[] readLines(String filePath) throws IOException
+	public static String[] readArray(String filePath) throws IOException
 	{
 		return read(filePath).toArray(new String[0]);
 	}
@@ -35,7 +35,7 @@ public class DiskReader
 	 * @return String Array with the file content lines
 	 * @throws IOException if an I/O error occurs reading from the stream
 	 */
-	public static String[] readLines(File file) throws IOException
+	public static String[] readArray(File file) throws IOException
 	{
 		return read(file).toArray(new String[0]);
 	}
