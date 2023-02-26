@@ -73,7 +73,7 @@ public class DiskReader
 	 */
 	public static String readString(String filePath) throws IOException
 	{
-		return new String(readBytes(filePath));
+		return readString(new File(filePath));
 	}
 	
 	/**
@@ -85,7 +85,7 @@ public class DiskReader
 	 */
 	public static String readString(File file) throws IOException
 	{
-		return new String(readBytes(file));
+		return new String(readBytes(file), StandardCharsets.UTF_8);
 	}
 	
 	/**
@@ -111,7 +111,7 @@ public class DiskReader
 	{
 		ArrayList<String> array = new ArrayList<>();
 		
-		String fullString = new String(readBytes(file), StandardCharsets.UTF_8);
+		String fullString = readString(file);
 		
 		BufferedReader reader = null;
 		try

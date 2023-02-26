@@ -79,7 +79,7 @@ public class GZipDiskReader
 	 */
 	public static String readString(String filePath) throws IOException, DataFormatException
 	{
-		return new String(readBytes(filePath));
+		return readString(new File(filePath));
 	}
 	
 	/**
@@ -92,7 +92,7 @@ public class GZipDiskReader
 	 */
 	public static String readString(File file) throws IOException, DataFormatException
 	{
-		return new String(readBytes(file));
+		return new String(readBytes(file), StandardCharsets.UTF_8);
 	}
 	
 	/**
@@ -120,7 +120,7 @@ public class GZipDiskReader
 	{
 		ArrayList<String> array = new ArrayList<>();
 		
-		String fullString = new String(readBytes(file), StandardCharsets.UTF_8);
+		String fullString = readString(file);
 		
 		BufferedReader reader = null;
 		try
