@@ -14,7 +14,7 @@ Add it as a maven dependency or just [download the latest release](https://githu
 </dependency>
 ```
 
-## 👨‍💻 Links
+## 📚 Links
 * [Website](https://konloch.com/DiskLib/)
 * [Discord Server](https://discord.gg/aexsYpfMEf)
 * [Download Releases](https://github.com/Konloch/DiskLib/releases)
